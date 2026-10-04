@@ -1,0 +1,54 @@
+/* duotone icon set (icons.js) */
+.ic{width:24px;height:24px;flex:none;overflow:visible}
+.ic-a{fill:var(--ic-acc,#FFD34D);stroke:none}
+.ic-l{fill:none;stroke:var(--ic-ln,#1F5BFF);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ic-t{fill:none;stroke:var(--ic-acc,#FFC21A);stroke-width:1.9;stroke-linecap:round}
+
+/* Onboarding — design B "story card" */
+.pg.onboard{background:#fff}
+.ob-deco{position:absolute;pointer-events:none}
+.ob-c1{left:-70px;top:30px;width:190px;opacity:.9;animation:drift 9s ease-in-out infinite}
+.ob-c2{right:-80px;top:120px;width:200px;opacity:.85;animation:drift 11s ease-in-out infinite reverse}
+.ob-lv1{left:0;bottom:0;width:92px;z-index:0;opacity:.95;transform-origin:0 100%;animation:sway 4.6s ease-in-out infinite}
+.ob-lv2{right:0;bottom:120px;width:90px;transform:scaleX(-1);transform-origin:50% 100%;opacity:.9;animation:swayR 5.4s ease-in-out infinite}
+.ob-skip{position:absolute;top:52px;right:18px;z-index:6;height:34px;padding:0 10px;font-size:16px;font-weight:600;color:var(--blue)}
+.ob-card{position:absolute;left:26px;right:26px;top:92px;height:372px;border-radius:32px;overflow:hidden;z-index:2;background:#EAF2FF;
+  box-shadow:0 0 0 6px rgba(255,255,255,.95),0 18px 40px rgba(31,91,255,.16);touch-action:pan-y;animation:pop .7s var(--spring) both}
+.ob-scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:translateX(var(--dx,40px)) scale(1.06);transition:opacity .5s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.ob-scene.on{opacity:1;transform:none}
+.ob-pod{position:absolute;left:50%;top:268px;width:190px;height:30px;margin-left:-95px;border-radius:50%;background:radial-gradient(closest-side,rgba(225,238,255,.95),rgba(225,238,255,0));transition:opacity .4s}
+.ob-card.runlane .ob-pod{opacity:0}
+.ob-eli{z-index:3}
+.ob-eli .eli-say{font-size:13px}
+.ob-card .ap{z-index:2}
+.ob-card .flt{z-index:4;color:var(--blue);font-weight:700}
+.ob-hint{position:absolute;left:50%;bottom:14px;z-index:5;transform:translate(-50%,20px);opacity:0;padding:6px 14px;border-radius:14px;background:rgba(255,255,255,.92);font-size:13px;font-weight:600;color:var(--navy);transition:all .4s var(--spring);pointer-events:none;white-space:nowrap}
+.ob-hint.on{opacity:1;transform:translate(-50%,0);animation:hintb 2.4s ease-in-out .4s infinite}
+.ob-text{position:absolute;left:20px;right:20px;top:488px;text-align:center;z-index:2}
+.ob-text h2{margin:0;font-size:25px;font-weight:700;color:var(--navy);line-height:1.3}
+.ob-text h2 b{color:var(--blue);font-family:var(--en),var(--f);font-weight:700}
+.ob-text p{margin:8px 6px 0;font-size:15px;color:#3B4A78;line-height:1.5}
+.ob-chips{display:flex;gap:8px;margin-top:20px}
+.ob-chip{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:12px 12px 11px;border-radius:20px;background:#fff;box-shadow:0 0 0 1px #EEF2FA,0 8px 18px rgba(31,91,255,.07);text-align:left;min-width:0}
+.ob-chip .ic{width:30px;height:30px}
+.ob-chip div{min-width:0}
+.ob-chip span{display:block;font-size:12px;color:var(--navy);line-height:1.3}
+.ob-chip b{display:block;font-size:20px;color:var(--blue);line-height:1.1;white-space:nowrap}
+.ob-chip b.sm{font-size:14px;font-family:var(--f);font-weight:600}
+.ob-dots{position:absolute;left:30px;bottom:72px;display:flex;gap:10px;z-index:6}
+.ob-dots i{width:10px;height:10px;border-radius:5px;background:#D6E0F2;transition:all .4s var(--spring);cursor:pointer}
+.ob-dots i.on{background:var(--blue);width:26px}
+.ob-next{position:absolute;right:22px;bottom:46px;z-index:5;display:flex;align-items:center;gap:12px;font-size:17px;font-weight:600;color:var(--navy)}
+.ob-nb{width:62px;height:62px;border-radius:31px;display:grid;place-items:center;background:linear-gradient(180deg,#3F73FF,#1846D6);box-shadow:0 12px 24px rgba(29,79,224,.35);--ic-ln:#fff;transition:width .45s var(--spring)}
+.ob-nb .ic{width:28px;height:28px}
+.ob-next.last .ob-nl{order:2;position:absolute;right:58px;color:#fff;z-index:1;pointer-events:none}
+.ob-next.last .ob-nb{width:160px;justify-content:flex-end;padding-right:18px;display:flex;align-items:center}
+
+/* responsive height: short screens get a shorter picture card so text, chips and the next button never collide */
+.short .ob-card{height:292px}
+.short .ob-text{top:404px}
+.short .ob-text h2{font-size:22px}
+.short .ob-text p{font-size:14px;margin-top:6px}
+.short .ob-chips{margin-top:14px}
+.ob-text{top:calc(488px + (var(--H,844px) - 844px) * .25)}
+.short .ob-text{top:404px}

@@ -1,0 +1,13 @@
+{
+  "name": "ELi Run Club",
+  "short_name": "ELi",
+  "start_url": "./#welcome",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#F6F7FB",
+  "theme_color": "#1F5BFF",
+  "icons": [
+    { "src": "assets/app_icon_192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/app_icon_512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

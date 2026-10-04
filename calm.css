@@ -1,0 +1,22 @@
+/* Calm backgrounds: scenery is desaturated and softened with a light veil so it never glares.
+   Only background art is touched — ELi (original art), icons and UI keep their colours. */
+:root{--calm:saturate(.84) brightness(1.01) contrast(.95)}
+/* home park */
+.pg.eli .fs-bg{filter:var(--calm)}
+.pg.eli .fs-bgw::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(236,243,250,.18),rgba(244,248,252,.06) 45%,rgba(244,248,252,.12));pointer-events:none}
+.pg.eli .wl-f{filter:saturate(.8) opacity(.9)}
+/* welcome scenery + floaters */
+.wl-p,.wl-f{filter:saturate(.82) brightness(1.01)}
+/* onboarding story cards + clouds */
+.ob-scene,.ob-deco{filter:var(--calm)}
+/* Hero Hall */
+.hl-bg,.hl-bgc{filter:var(--calm)}
+.hl-bgc{filter:blur(2px) saturate(.84) brightness(1.01) contrast(.95)}
+/* run recorder map */
+.rc-map{filter:saturate(.85) brightness(1.01) contrast(.96)}
+.rc-mapb{filter:blur(14px) saturate(.85)}
+/* feed post pictures */
+.fp-map{filter:saturate(.75) brightness(1.03)}
+.fp-photo{filter:saturate(.9)}
+/* warm-up / finish scenes */
+.sc-bg,.sc-fin .sc-bg{filter:saturate(.86)}
